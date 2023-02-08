@@ -1,0 +1,23 @@
+{
+  "name": "setupjson",
+  "version": "1.0.0",
+  "description": "trying json package",
+  "main": "readWrite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon readWrite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mufeedppm/backend.git"
+  },
+  "author": "Mohammad Mufeed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mufeedppm/backend/issues"
+  },
+  "homepage": "https://github.com/mufeedppm/backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
