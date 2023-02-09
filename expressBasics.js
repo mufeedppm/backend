@@ -6,24 +6,21 @@ const bodyParser = require('body-parser')
 
 const app = express();
 
+const adminRoutes=require('./routes/admin')
+
+const shopRoutes= require('./routes/shop')
+
 app.use(bodyParser.urlencoded({extended: false}))
 
 
-app.use('/add-product',(req, res, next)=>{
-    res.send('<form action="/product" method="POST"><br>title<br><input type="text" name="title"> </input> <br> size<br><input type="text" name="size"> </input><br> <button type="submit">Send</button> </form> ')
-    
+
+app.use('/admin',adminRoutes)
+
+app.use('/shop',shopRoutes)
+
+app.use((req,res,next)=>{
+    res.status(404).send('<h1>ERR 404 : Page not found</h1>')
 })
 
-
-
-app.use('/product',(req, res, next)=>{
-    console.log(req.body)
-    res.redirect('/')
-})
-
-app.use('/',(req, res, next)=>{
-    
-    res.send('<h3>Homepage</h3>')
-})
 
 app.listen(3000);
