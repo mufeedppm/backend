@@ -2,10 +2,10 @@
   "name": "setupjson",
   "version": "1.0.0",
   "description": "trying json package",
-  "main": "expressBasics.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon expressBasics.js"
+    "start": "nodemon groupChatProto/app.js"
   },
   "repository": {
     "type": "git",
