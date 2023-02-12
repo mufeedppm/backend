@@ -6,14 +6,14 @@ const router = express.Router();
 
 const rootDir=require('../utility/path')
 
-router.get('/add-product',(req, res, next)=>{
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html'))
+router.get('/contactUs',(req, res, next)=>{
+    res.sendFile(path.join(rootDir, 'views', 'contactUs.html'))
     
 })
 
-router.post('/add-product',(req, res, next)=>{
+router.post('/contactUs',(req, res, next)=>{
     console.log(req.body)
-    res.redirect('/shop')
+    res.redirect('/success')
 })
 
 module.exports= router;
